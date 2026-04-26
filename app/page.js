@@ -179,7 +179,7 @@ export default function Home() {
                     <Play className="w-4 h-4 text-black opacity-30" />
                 </div>
                 <div className="aspect-video relative rounded-lg overflow-hidden group shadow-md cursor-pointer">
-                   <NextImage src={articles[0]?.image_url?.split(/[\n,]+/)[0].trim() || 'https://images.unsplash.com/photo-1585829365234-7541f71df46f?auto=format&fit=crop&q=80&w=1200'} alt="Video Preview" fill className="object-cover group-hover:scale-105 transition-transform" />
+                   <NextImage src={articles[0]?.image_url?.split(/[\n,]+/)[0].trim() || '/logo-bgt.png'} alt="Video Preview" fill className="object-cover group-hover:scale-105 transition-transform" />
                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                       <Play className="w-12 h-12 text-white fill-current" />
                    </div>
