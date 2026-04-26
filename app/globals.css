@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #000000;
+  --accent: #111827;
+  --bg-magazine: #fdf7e8; /* Warm Academic Parchment */
+  --font-inter: var(--font-inter), sans-serif;
+  --font-playfair: var(--font-playfair), serif;
+  --gray-light: #f9fafb;
+  --border-ui: #e5e7eb;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-bg-magazine: var(--bg-magazine);
+  --color-gray-light: var(--gray-light);
+  --color-border-ui: var(--border-ui);
+}
+
+@layer base {
+  body {
+    @apply bg-bg-magazine text-primary antialiased;
+    font-family: var(--font-inter);
+  }
+  
+  h1, h2, h3, h4, .serif {
+    font-family: var(--font-playfair);
+  }
+
+  /* Sharp lines and authoritative layout */
+  hr {
+    @apply border-border-ui;
+  }
+}
+
+/* Image Overlay Gradient for Hero Cards */
+.hero-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 40%, transparent 100%);
+}
+
+/* Rounded Utilities for Replica Design */
+.btn-rounded {
+  @apply rounded-md font-bold text-xs tracking-wider transition-all duration-300;
+}
+
+.card-rounded {
+  @apply rounded-xl overflow-hidden border border-border-ui shadow-sm transition-all duration-500;
+}
+
+/* Custom Scrollbar for modern feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* No Scrollbar Utility */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
